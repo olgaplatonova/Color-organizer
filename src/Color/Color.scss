@@ -1,0 +1,22 @@
+.color-box {
+  height: 250px;
+  width: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.preview-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  padding: 15px;
+}
+
+.color-wrapper {
+  padding: 0;
+  box-shadow: -7px 3px 41px 3px rgba(34, 60, 80, 0.24);
+  border-radius: 10px;
+  margin-bottom: 25px;
+
+}

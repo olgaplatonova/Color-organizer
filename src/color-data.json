@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Ocean at dusk",
+    "color": "#58CDC1",
+    "rating": "5"
+  },
+  {
+    "id": "2",
+    "title": "Lawn",
+    "color": "#AFCD58",
+    "rating": "3"
+  },
+  {
+    "id": "3",
+    "title": "Dark red",
+    "color": "#AA0000",
+    "rating": "0"
+  },
+  {
+    "id": "4",
+    "title": "Banane",
+    "color": "#FFE752",
+    "rating": "5"
+  },
+  {
+    "id": "4",
+    "title": "Pink",
+    "color": "#FDB0E1",
+    "rating": "5"
+  },
+  {
+    "id": "4",
+    "title": "Lilac",
+    "color": "#E0B0FD",
+    "rating": "4"
+  }
+]
