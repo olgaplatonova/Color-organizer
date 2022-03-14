@@ -1,34 +1,30 @@
-import React, { useState } from 'react';
 import Star from '../Star/Star';
 import './StarRating.scss';
 
-//создает массив и заполняет значениями
-function initStars(totalStars, rating) {
-    const starsData = new Array(totalStars);
-    starsData.fill(true, 0, rating);
-    starsData.fill(false, rating, totalStars);
-    return starsData;
-}
-
-//Компонент с двумя аргументами
-const StarRating = ({totalStars = 5, rating}) => {
-    const [arrStars, setArrStars] = useState(initStars(totalStars, rating));
-
-    const toggleStar = (index) => {
-        setArrStars(initStars(totalStars, index + 1));
+export default function StarRating({
+                                       totalStars,
+                                       selectedStars,
+                                       onRate = f => f
+                                   }) {
+    //создает массив и заполняет значениями
+    function createArr(totalStars) {
+        return [...Array(totalStars).keys()];
     }
 
     return (
         <>
             <div className={'stars__container'}>
-                {arrStars.map((item, index) => (
-                    <Star key={index} selected={item} onclick={() => toggleStar(index)} />
+                {createArr(totalStars).map((item, index) => (
+                    <Star
+                        key={index}
+                        selected={selectedStars > index}
+                        onSelect={() => onRate(index + 1)}/>
                 ))}
             </div>
+            <p> {selectedStars} of {totalStars} </p>
         </>
     );
 }
 
 StarRating.propTypes = {};
 
-export default StarRating;

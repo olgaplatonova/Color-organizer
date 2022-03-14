@@ -9,12 +9,18 @@ export default function App( ) {
   return (
 
     <ColorList
-        colors={colors}
-        onRemoveColor={id => {
-          const newColors = colors.filter(color => color.id !== id)
-            console.log(newColors)
-          setColors(newColors)
+        colors = {colors}
+        onRateColor= { (id, rating) => {
+            setColors(
+                colors.map(color => color.id === id ? { ...color, rating } : color)
+            )
         }}
+        onRemoveColor = { id => {
+          setColors(
+              colors.filter(color => color.id !== id)
+          )
+        }}
+
     />
   );
 }

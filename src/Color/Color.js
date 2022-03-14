@@ -3,7 +3,13 @@ import './Color.scss';
 import StarRating from '../StarRating/StarRating';
 import {FaTrash} from 'react-icons/fa';
 
-export default function Color  ({ id, title, color, rating, onRemove = f => f }) {
+export default function Color  ({
+                                    id,
+                                    title,
+                                    color,
+                                    rating,
+                                    onRemove = f => f,
+                                    onRate = f => f}) {
     return (
         <>
             <div className={'color-wrapper'}>
@@ -16,11 +22,12 @@ export default function Color  ({ id, title, color, rating, onRemove = f => f })
 
                 <div className={'preview-text'}>
                     <p> {title} </p>
-                    <StarRating selectedStar={rating}/>
+                    <StarRating
+                        totalStars={5}
+                        selectedStars={rating}
+                        onRate={rating => onRate(id, rating)}/>
                 </div>
             </div>
-
-
         </>
     );
 }
