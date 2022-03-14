@@ -1,4 +1,4 @@
-.color-box {
+.background-color{
   height: 250px;
   width: auto;
   border-radius: 10px 10px 0 0;
@@ -18,5 +18,23 @@
   box-shadow: -7px 3px 41px 3px rgba(34, 60, 80, 0.24);
   border-radius: 10px;
   margin-bottom: 25px;
+  position: relative;
+}
 
+.trash {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
 }
